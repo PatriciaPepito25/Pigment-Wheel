@@ -1,9 +1,3 @@
-/* ============================================================
-   PIGMENT WHEEL — STYLESHEET
-   Sections: Reset, Tokens, Header/Nav, Hero, Wheel, Start Here, Footer
-   ============================================================ */
-
-/* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 ul { list-style: none; margin: 0; padding: 0; }
@@ -11,7 +5,7 @@ a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 button { font-family: inherit; }
 
-/* ---------- Design tokens ---------- */
+/* color and font */
 :root{
   --cream: #EEF2C3;
   --footer: linear-gradient(to right, #6b8c8d 0%, #1e2727 87%);
@@ -35,14 +29,12 @@ body{
 
 .page{ overflow-x: hidden; }
 
-/* ============================================================
-   HEADER / NAV
-   ============================================================ */
+/* HEADER NAVIGATION */
 .topbar{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px;
+  padding: 1px 20px;
   background: var(--brown);
   position: sticky;
   top: 0;
@@ -110,7 +102,19 @@ body{
 }
 
 .nav-list li:last-child .nav-link{ border-bottom: none; }
- 
+
+/* hamburger */
+.menu-btn {
+  display: none;
+}
+
+.nav-list .menu-btn img{
+  width: 30px;
+  height: 15px;
+  margin: auto 0;
+  display: none;
+}
+
 @media (min-width: 860px){
   .nav-toggle{ display: none; }
   .mobile-nav{
@@ -135,7 +139,8 @@ body{
   font-family: var(--font-heading);
   font-size: clamp(2rem, 8vw, 4rem);
   line-height: 1.15;
-  font-weight: 800;
+  font-weight: 50;
+  line-height: 50px;
   margin: 0 0 14px;
   color: var(--brown);
 }
@@ -165,7 +170,7 @@ body{
   flex-direction: column;
   gap: 14px;
   max-width: 320px;
-  margin: 8em 0 3em 0;
+  margin: 3em 0 3em 0;
 }
 
 .btn{
@@ -173,8 +178,7 @@ body{
   text-align: center;
   padding: 14px 22px;
   border-radius: 30px;
-  font-weight: 700;
-  font-size: 0.82rem;
+  font-size: 1rem;
   letter-spacing: 0.06em;
   cursor: pointer;
   transition: transform 0.15s ease, background 0.2s ease;
@@ -211,7 +215,7 @@ body{
   background: var(--brown);
   padding: 48px 24px 70px;
   text-align: center;
-  margin: ;
+  margin: 5px 0 0 5px;
 }
 
 .wheel-title{
