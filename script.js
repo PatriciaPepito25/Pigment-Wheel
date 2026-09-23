@@ -1,31 +1,21 @@
-// Mobile nav toggle
-document.addEventListener("DOMContentLoaded", () => {
-  const navToggle = document.getElementById("navToggle");
-  const mobileNav = document.getElementById("mobileNav");
+// Hamburger toggle
+const menuBtn = document.getElementById("menu-btn");
+const mobileNav = document.getElementById("mobileNav");
 
-  if (!navToggle || !mobileNav) return;
+menuBtn.addEventListener("click", function () {
 
-  navToggle.addEventListener("click", () => {
-    const isOpen = mobileNav.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
+    mobileNav.classList.toggle("active");
+
+    const isOpen = mobileNav.classList.contains("active");
+
     mobileNav.setAttribute("aria-hidden", String(!isOpen));
-  });
 
-  // Close the menu when a link is clicked (useful for single-page anchors)
-  mobileNav.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", () => {
-      mobileNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-      mobileNav.setAttribute("aria-hidden", "true");
-    });
-  });
 });
 
-// Pigment Wheel — wedge generation, pop animation, auto-demo
-
+// Pigment Wheel with animation
 const CENTER = { x: 210, y: 210 };
 const RADIUS = 190;
-const POP_DISTANCE = 34; // how far a wedge slides outward when "popped"
+const POP_DISTANCE = 34; 
 
 // Colors ordered clockwise from top
 const WEDGES = [
@@ -87,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  /* ---------- Build wedges ---------- */
+    // Build wedges
   WEDGES.forEach((w, i) => {
     const startAngle = -Math.PI / 2 + i * anglePer; // start at top, go clockwise
     const endAngle = startAngle + anglePer;
@@ -125,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     wedgeEls.push(group);
   });
 
-  /* ---------- Auto-demo on load (stops on first real click) ---------- */
+  // Auto-demo on load (stops on first real click)
   function autoDemo() {
     let i = 0;
     const interval = setInterval(() => {
