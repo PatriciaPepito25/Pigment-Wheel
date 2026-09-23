@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pigment Wheel</title>
-<link rel="stylesheet" href="styles.css">
-<script src="script.js"></script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=DM+Serif+Text:ital@0;1&family=Young+Serif&display=swap');
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pigment Wheel</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=DM+Serif+Text:ital@0;1&family=Young+Serif&display=swap');</style>
 </head>
 <body>
 
 <div class="page">
 
-  <!-- ===================== HEADER ===================== -->
   <header class="topbar">
     <div class="brand-and-logo">
       <a href="index.html"><img src="img/logo.png" alt="Pigment Wheel logo" width="60" height="70"></a>
@@ -29,12 +26,11 @@
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="contact.html" class="nav-link">Contact Us</a></li>
       </ul>
-
-      <button class="menu-btn"><img src="img/icons/hamburger.svg" alt="hamburger-icon"></button>
     </nav>
+
+    <button id="menu-btn" class="menu-btn"><img src="img/icons/hamburger.svg" alt="Menu"></button>
   </header>
 
-  <!-- ===================== HERO ===================== -->
   <section id="home" class="first-section">
     <h1 class="title">
       WHERE<span class="h-art"> ART </span>MEETS<span class="h-history"> HISTORY </span>AND<span class="h-science"> SCIENCE </span>
@@ -54,38 +50,48 @@
     </div>
   </section>
 
-  <!-- ===================== WHEEL ===================== -->
   <section id="wheel" class="second-section">
-    <h2 class="wheel-title">Pigment Wheel</h2>
+    <div class="wheel-left">
+  
+      <div id="stage">
+          <svg id="wheelSvg" width="320" height="320" viewBox="0 0 420 420"></svg>
+      </div>
 
-    <div id="stage">
-      <svg id="wheelSvg" width="420" height="420" viewBox="0 0 420 420"></svg>
+      <p class="wheel-caption">
+          Click a wedge to open its pigment profile
+      </p>
     </div>
 
-    <p class="wheel-caption">Click a wedge to open its pigment profile</p>
-  
-    <h2 class="start-here">START HERE</h2>
+    <div class="wheel-right">
 
-    <div class="pigment-card" id="pigmentCard">
-      <p class="pigment-desc" id="pDesc">
-        Pigments have shaped art history in ways most viewers never notice. Long before
-        synthetic paints existed, artists relied on colors pulled straight from the earth
-        and the natural world — crushed minerals, ground gemstones, tree resins, even dried
-        insects — and many of these materials were shockingly hard to come by.
-      </p>
+      <h2 class="wheel-title">Pigment Wheel</h2>
+
+      <h2 class="start-here">START HERE</h2>
+
+      <div class="pigment-card" id="pigmentCard">
+          <p class="pigment-desc" id="pDesc">
+            Pigments have shaped art history in ways most viewers never notice.
+            Long before synthetic paints existed, artists relied on colors pulled
+            straight from the earth and the natural world: crushed minerals,
+            ground gemstones, tree resins, even dried insects, and many of these
+            materials were shockingly hard to come by.
+          </p>
+      </div>
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="site-footer">
-    <h2 class="footer-heading">About the Author</h2>
-    <p class="footer-author">Patricia Margaret D. Pepito</p>
-    <p class="footer-bio">
-      A college student, currently taking BSIT Web Development, who is passionate in
-      creating stuffs and turning ideas into tangible design and UI elements.
-    </p>
-    <p class="footer-quote">
-      <em>&ldquo;Built for art historians, chemistry nerds, and everyone in between.&rdquo;</em>
+  <footer class="site-footer"> 
+
+    <div class="author">
+      <h2 class="footer-heading">About the Author</h2> 
+      <p class="footer-author">Patricia Margaret D. Pepito</p>
+      <p class="footer-bio">
+        A college student, currently taking BSIT Web Development, who is passionate in
+        creating stuffs and turning ideas into tangible design and UI elements.
+      </p>
+    </div>
+
+    <p class="footer-quote"><em>&ldquo;Built for art historians, chemistry nerds, and everyone in between.&rdquo;</em>
     </p>
 
     <div class="social-row">
@@ -98,7 +104,5 @@
   </footer>
 
 </div>
-
-<!-- <script src="pigment-wheel/script.js"></script> -->
 </body>
 </html>
