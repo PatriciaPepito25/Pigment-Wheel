@@ -1,67 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pigment Wheel</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<!-- <link rel="stylesheet" href="styles.css"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pigment Wheel</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=DM+Serif+Text:ital@0;1&family=Young+Serif&display=swap');</style>
 </head>
-<body>
+<body class="brown-body">
     <header class="topbar">
-        <div class="brand-name"><img src="img/logo.png" alt="logo" width="30" height="40">Pigment Wheel</div>
+        <div class="brand-and-logo">
+            <a href="index.html"><img src="img/logo.png" alt="Pigment Wheel logo" width="60" height="70"></a>
+            <span>Pigment Wheel</span>
+        </div>
 
         <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
             <ul class="nav-list">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="timeline.html" class="nav-link">Timeline</a></li>
-            <li><a href="map.html" class="nav-link">Map</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
             </ul>
         </nav>
+
+        <button id="menu-btn" class="menu-btn"><img src="img/icons/hamburger.svg" alt="Menu"></button>
     </header>
 
     <section id="timeline">
         <h1>TIMELINE</h1>
         <div>
-            <h2>c. 1820 CE <br>The Brilliant Orange</h2>
-            <p>--</p>
+            <img src="img/cadmium-orange.jpg" alt="cadmium orange">
+            <h2>c. 1820 CE <br>Cadmium Orange</h2>
+            <p>A vivid orange pigment developed in the 19th century, valued for its intense color and widely used in paintings, decorative arts, and later industrial applications.</p>
         </div>
         <div>
-            <h2>15th Century CE <br>The Golden Yellow</h2>
-            <p>--</p>
+            <img src="img/indian-yellow.jpg" alt="indian yellow">
+            <h2>15th Century CE <br>Indian Yellow</h2>
+            <p>A rich yellow pigment associated with medieval and Renaissance art, used to create warm golden tones in paintings, manuscripts, and religious artwork.</p>
         </div>
         <div>
-            <h2>c. 1200 BCE <br>The Royal Purple</h2>
-            <p>--</p>
+            <img src="img/murex-trunculus.jpg" alt="purple">
+            <h2>c. 1200 BCE <br>Tyran Purple</h2>
+            <p>A luxurious purple dye made from sea snails and highly prized in the ancient Mediterranean. Its rarity made purple a symbol of royalty, wealth, and power.</p>
         </div>
         <div>
-            <h2>c. 1580-1550 BCE <br>The Precious Blue</h2>
-            <p>--</p>
+            <img src="img/ultramarine.jpg" alt="ultramarine">
+            <h2>c. 1580-1550 BCE <br>Ultramarine</h2>
+            <p>An early synthetic blue pigment known as Egyptian blue. Developed in ancient Egypt, it was used to decorate sculptures, ceramics, tombs, and other objects.</p>
         </div>
         <div>
-            <h2>c. 4000-3000 <br>The Ancient Green</h2>
-            <p>--</p>
+            <img src="img/malachite.jpg" alt="malachite">
+            <h2>c. 4000-3000 <br>Malachite</h2>
+            <p>Early green pigments were created from natural minerals and materials. They were used in ancient artwork and decoration to represent plants, nature, and life.</p>
         </div>
         <div>
-            <h2>c. 8000-7000 BCE <br>The Brilliant Red</h2>
-            <p>--</p>
+            <img src="img/vermilion.jpg" alt="vermilion">
+            <h2>c. 8000-7000 BCE <br>Vermilion</h2>
+            <p>One of the earliest known red pigments, made from naturally occurring earth minerals such as ochre. It was used by prehistoric people for body decoration, cave art, and symbolic markings.</p>
         </div>
     </section>
 
+    <footer class="site-footer"> 
+        <div class="author">
+            <h2 class="footer-heading">About the Author</h2> 
+            <p class="footer-author">Patricia Margaret D. Pepito</p>
+            <p class="footer-bio">
+                A college student, currently taking BSIT Web Development, who is passionate in
+                creating stuffs and turning ideas into tangible design and UI elements.
+            </p>
+        </div>
 
-    <footer>
-        <h1>About the Author</h1>
-        <h2>Patricia Margaret D. Pepito</h2>
-        <p>A college student, currently taking BSIT Web Development, who is passionate in creating stuffs and turning ideas into tangible design and UI elements.</p>
-        <p><em>“Built for art historians, chemistry nerds, and everyone in between.”</em></p>
-        <p>&copy;2026 Pigment Wheel. All rights reserved.</p>
-        <p>Link socials <div class="icon"><img src="img/icons/instagram.svg" alt="instagram-icon"></div>
-        <div class="icon"><img src="img/icons/facebook.svg" alt="facebook-icon"></div>  
-        <div class="icon"><img src="img/icons/gmail.svg" alt="gmail-icon"></div></p>
+        <p class="footer-quote"><em>&ldquo;Built for art historians, chemistry nerds, and everyone in between.&rdquo;</em>
+        </p>
+
+        <div class="social-row">
+            <a href="#" class="icon" aria-label="Instagram"><img src="img/icons/instagram.svg" alt="Instagram icon"></a>
+            <a href="#" class="icon" aria-label="Facebook"><img src="img/icons/facebook.svg" alt="Facebook icon"></a>
+            <a href="#" class="icon" aria-label="Email"><img src="img/icons/gmail.svg" alt="Email icon"></a>
+        </div>
+
+        <p class="footer-copy">&copy; 2026 Pigment Wheel. All rights reserved.</p>
     </footer>
 </body>
 </html>
