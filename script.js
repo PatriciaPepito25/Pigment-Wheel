@@ -1,15 +1,19 @@
-// Hamburger toggle
 const menuBtn = document.getElementById("menu-btn");
+const menuIcon = menuBtn.querySelector("img");
 const mobileNav = document.getElementById("mobileNav");
 
-menuBtn.addEventListener("click", function () {
+menuBtn.addEventListener("click", () => {
+    const isOpen = mobileNav.classList.toggle("active");
 
-    mobileNav.classList.toggle("active");
-
-    const isOpen = mobileNav.classList.contains("active");
-
-    mobileNav.setAttribute("aria-hidden", String(!isOpen));
-
+    if (isOpen) {
+        menuIcon.src = "img/icons/cancel.svg";
+        menuIcon.alt = "Close menu";
+        mobileNav.setAttribute("aria-hidden", "false");
+    } else {
+        menuIcon.src = "img/icons/hamburger.svg";
+        menuIcon.alt = "Open menu";
+        mobileNav.setAttribute("aria-hidden", "true");
+    }
 });
 
 // Pigment Wheel with animation
@@ -19,12 +23,12 @@ const POP_DISTANCE = 34;
 
 // Colors ordered clockwise from top
 const WEDGES = [
-  { base: "#F4C21A", light: "#FFE580", dark: "#B88E00" },
-  { base: "#E8791A", light: "#FFB35C", dark: "#A6520A" },
-  { base: "#3E7D32", light: "#7ABF63", dark: "#1F4A18" },
-  { base: "#1E5FA8", light: "#5C9BE0", dark: "#0E3766" },
-  { base: "#3B1E5E", light: "#6B4A93", dark: "#1E0E33" },
-  { base: "#8B1A2B", light: "#C24A5A", dark: "#4E0A14" },
+  { base: "#F4C21A", light: "#FFE580", dark: "#B88E00", label: "Yellow", page: "yellow.html"},
+  { base: "#E8791A", light: "#FFB35C", dark: "#A6520A", label: "Orange", page: "orange.html"},
+  { base: "#3E7D32", light: "#7ABF63", dark: "#1F4A18", label: "Green", page: "green.html"},
+  { base: "#1E5FA8", light: "#5C9BE0", dark: "#0E3766", label: "Blue", page: "blue.html" },
+  { base: "#3B1E5E", light: "#6B4A93", dark: "#1E0E33", label: "Purple", page: "purple.html" },
+  { base: "#8B1A2B", light: "#C24A5A", dark: "#4E0A14", label: "Red", page: "red.html" },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -107,9 +111,17 @@ document.addEventListener("DOMContentLoaded", () => {
     path.setAttribute("fill", `url(#${gradId})`);
     group.appendChild(path);
 
-    group.addEventListener("click", () => toggleWedge(group, w.label));
-    group.addEventListener("mouseenter", () => setLabel(w.label));
-    group.addEventListener("mouseleave", () => setLabel(activeLabel || "Wedge"));
+    group.addEventListener("click", () => 
+   
+    {
+      window.location.href = w.page;
+    });
+
+    group.addEventListener("mouseenter", () => {
+      setLabel(w.label);
+    });
+
+    group.addEventListener("mouseleave", () => {setLabel(activeLabel || "Wedge")});
 
     svg.appendChild(group);
     wedgeEls.push(group);
