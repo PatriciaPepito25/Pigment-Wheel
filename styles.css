@@ -1523,6 +1523,7 @@ hr {
         font-size: clamp(2rem, 8vw, 3rem);
         font-weight: 400;
         color: var(--cream);
+        text-align: center;
     }
 
     /* Center Timeline */
@@ -1761,10 +1762,11 @@ hr {
     background-color: var(--brown);
     color: var(--cream);
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .about-section h1 {
-    margin: 0 0 20px 40px;
+    margin: 0 0 20px 0;
     font-family: var(--font-heading);
     font-size: clamp(2rem, 8vw, 3.5rem);
     font-weight: 400;
@@ -1772,22 +1774,24 @@ hr {
 }
 
 .about-content {
-    padding: 0 12px;
+    padding: 0;
     width: 100%;
-    max-width: 0 auto;
-    margin: 0 0 0 30px;
+    max-width: 100%;
+    margin: 0;
     display: grid;
-    grid-template-columns: 300px 200px 300px;
-    column-gap: 50px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr);
+    column-gap: 30px;
     align-items: start;
+    box-sizing: border-box;
 }
 
 .about-intro {
     padding-top: 54px;
+    min-width: 0;
 }
 
 .about-intro h2, .vision h2 {
-    margin: 0 0 15px;
+    margin: 0 0 15px 0;
     font-family: var(--font-subheading);
     font-size: clamp(1rem, 8vw, 1.5rem);
     font-weight: 500;
@@ -1795,8 +1799,9 @@ hr {
 }
 
 .about-intro p {
-    width: 250px;
-    margin: 0;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 0 20px 0;
     font-family: var(--font-body);
     font-size: 18px;
     line-height: 1.55;
@@ -1804,12 +1809,13 @@ hr {
 }
 
 .about-image {
-    width: 140%;
-    height: 220px;
-    margin-top: -25px;
+    width: 100%;
+    height: 250px;
+    margin: -25px 0 0 80px;
     overflow: hidden;
     border: 1px solid var(--cream);
     border-radius: 25px;
+    box-sizing: border-box;
 }
 
 .about-image img {
@@ -1821,38 +1827,45 @@ hr {
 }
 
 /* Vision Section */
+
 .vision {
     width: 100%;
+    min-width: 0;
     margin-top: -30px;
     padding-bottom: 40px;
+    box-sizing: border-box;
 }
 
 .vision h2 {
-    margin: 0 0 0 70px;
+    margin-left: 100px;
 }
 
 .vision-item {
     position: relative;
-    width: 465px;
-    min-height: 100px;
-    margin: 15px 0 0 10px;
+    width: calc(100% - 50px);
+    max-width: 465px;
+    min-width: 0;
+    min-height: 80px;
+    margin: 15px 122px 0 10px;
     border: 1px solid var(--cream);
     display: flex;
     align-items: center;
     background-color: var(--brown);
+    box-sizing: border-box;
 }
 
 .vision-item p {
     margin: 0;
     width: 100%;
-    padding: 20px 50px;
+    min-width: 0;
+    padding: 20px 60px;
+    box-sizing: border-box;
     font-family: var(--font-subheading);
     font-size: 18px;
     line-height: 1.7;
     letter-spacing: 0.3px;
     text-transform: uppercase;
     color: var(--cream);
-    font-size: 13px;
 }
 
 .vision-number {
@@ -1877,7 +1890,8 @@ hr {
 .brat-section {
     width: 100%;
     min-height: 400px;
-    padding: 100px 8% 200px;
+    padding: 50px 80px;
+    margin: 110px 0 130px 0;
     background-color: var(--cream);
     color: var(--brown);
 }
@@ -1896,7 +1910,7 @@ hr {
 }
 
 .brat-info h1 {
-    margin: 0 0 2px 22px;
+    margin: 0 0 2px 0;
     padding: 0 20px 0 0;
     font-family: var(--font-heading);
     font-size: clamp(2rem, 8vw, 3.5rem);
@@ -1905,7 +1919,7 @@ hr {
 }
 
 .brat-info h2 {
-    margin: 0 0 10px 22px;
+    margin: 0 0 10px 0;
     font-family: var(--font-subheading);
     font-size: 24px;
     font-weight: 400;
@@ -1913,8 +1927,8 @@ hr {
 }
 
 .brat-info p {
-    width: 450px;
-    margin: 0 0 0 22px;
+    width: 500px;
+    margin: 0;
     font-family: var(--font-body);
     font-size: 18px;
     line-height: 1.55;
@@ -1928,8 +1942,8 @@ hr {
 }
 
 .profile-photo {
-    width: 326px;
-    height: 316px;
+    width: 320px;
+    height: 320px;
     display: block;
     margin: 30px auto 10px;
     object-fit: cover;
@@ -1973,55 +1987,59 @@ hr {
 }
 
 /* About - Tablet */
-@media (min-width: 800px) and (max-width: 1032px) {
-
+@media (min-width: 800px) and (max-width: 1032px) {     
     /* About Section */
     .about-section {
+        position: relative;
         width: 100%;
-        min-height: 300px;
-        /* padding: 50px 40px; */
+        min-height: 200px;
+        margin: 0 auto;
         padding: 60px 80px;
+        background-color: var(--brown);
+        color: var(--cream);
         overflow: hidden;
+        box-sizing: border-box;
     }
 
     .about-section h1 {
-        margin: 0 0 25px 20px;
-        font-size: clamp(2rem, 5vw, 3rem);
+        margin: 0 0 25px 0;
+        font-size: clamp(2rem, 8vw, 3.5rem);
     }
 
     .about-content {
+        padding: 0;
         width: 100%;
         max-width: 100%;
         margin: 0;
-        padding: 0 10px;
-
         display: grid;
-        grid-template-columns: 1fr 0.8fr;
-        column-gap: 30px;
-        row-gap: 35px;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr);
+        column-gap: 0;
         align-items: start;
+        box-sizing: border-box;
+        position: relative;
     }
 
     .about-intro {
-        padding-top: 20px;
+        padding-top: 54px;
         min-width: 0;
+        width: 300px;
     }
 
     .about-intro h2, .vision h2 {
-        font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+        font-size: 24px;
     }
 
-    .about-intro p {
+    .about-intro p{
         width: 100%;
-        max-width: 350px;
-        font-size: 16px;
+        max-width: 250px;
+        font-size: 15px;
         line-height: 1.6;
     }
 
     .about-image {
         width: 100%;
-        height: 230px;
-        margin-top: 0;
+        height: 250px;
+        margin-bottom: 15px;
     }
 
     .about-image img {
@@ -2032,19 +2050,22 @@ hr {
     }
 
     /* Vision Section */
+
     .vision {
-        grid-column: 1 / -1;
         width: 100%;
-        margin-top: 0;
-        padding-bottom: 25px;
+        min-width: 0;
+        margin: -30px 0 0 40px;
+        padding: 0 0 140px;
+        box-sizing: border-box;
+        z-index: 2;
     }
 
     .vision h2 {
-        margin: 0 0 15px 10px;
+        margin: 0 0 15px 60px;
     }
 
     .vision-item {
-        width: calc(100% - 10px);
+        width: calc(100% - 50px);
         min-height: 90px;
         margin: 20px 0 0 10px;
     }
@@ -2052,7 +2073,7 @@ hr {
     .vision-item p {
         width: 100%;
         padding: 20px 40px;
-        font-size: 13px;
+        font-size: 15px;
         line-height: 1.6;
     }
 
@@ -2089,19 +2110,19 @@ hr {
     .brat-info h1 {
         margin: 0 0 5px 10px;
         padding: 0;
-        font-size: clamp(2rem, 4.5vw, 3rem);
+        font-size: 56px;
     }
 
     .brat-info h2 {
         margin: 0 0 12px 10px;
-        font-size: clamp(19px, 2.5vw, 24px);
+        font-size: 24px;
     }
 
     .brat-info p {
         width: calc(100% - 10px);
         max-width: 450px;
         margin: 0 0 0 10px;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.6;
     }
 
@@ -2152,164 +2173,524 @@ hr {
 /* About - Mobile */
 @media (max-width: 799px) {
 
+    html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
     /* About Section */
     .about-section {
-        width: 100%;
-        min-height: auto;
-        padding: 40px 64px;
+        width: 100%;           
+        min-height: 1000px;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 50px 34px 60px;
+        background-color: var(--brown);
+        color: var(--cream);
+        overflow: hidden;   
     }
 
     .about-section h1 {
-        margin: 0 0 25px;
-        font-size: clamp(2rem, 8vw, 2.8rem);
+        margin: 0 0 35px 0;
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 8vw, 3rem);
+        font-weight: 400;
+        color: var(--cream);
+        text-align: center;
+        padding: 0 30px;
     }
 
-    .about-content {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 25px;
+    .about-content { 
+        position: relative; 
+        width: 100%; 
+        max-width: 100%; 
+        margin: 0; 
+        padding: 0; 
+        display: block; 
+        min-height: 300px; 
     }
 
     .about-intro {
-        padding-top: 0;
+        width: 100%;
+        padding: 0 30px;
+        box-sizing: border-box;
     }
 
-    .about-intro h2,
-    .vision h2 {
-        margin: 0 0 12px;
-        font-size: 1.3rem;
+    .about-intro h2 {
+        margin: 0 0 5px;
+        font-size: 20px;
+        line-height: 1.4;
+        color: var(--cream);
     }
 
     .about-intro p {
         width: 100%;
         max-width: 100%;
-        font-size: 16px;
-        line-height: 1.7;
+        margin: 0;
+        font-size: 15px;
+        /* font-size: 1rem; */
+        line-height: 1.55;
+        color: var(--cream);
+        overflow-wrap: break-word;
     }
 
-    .about-image {
-        width: 100%;
-        height: clamp(200px, 55vw, 300px);
-        margin-top: 0;
+    .about-image { 
+        position: absolute;
+        top: 135px; 
+        left: -16px; 
+        width: 55%; 
+        height: 180px; 
+        margin: 80px 0 0 -30px;
+        overflow: hidden; 
+        border: 1px solid var(--cream); 
+        border-radius: 0 28px 28px 0;
+        box-sizing: border-box;
+        z-index: 1;
     }
 
-    .about-image img {
+    .about-image img { 
+        display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        object-position: center;
+        object-fit: cover; 
+        object-position: center; 
     }
 
-    /* Vision Section */
-    .vision {
+    /* Vision section */
+    .vision { 
+        position: absolute; 
+        top: 130px; 
+        left: 34%; 
+        width: 66%; 
+        margin: 40px 0 0 0;
+        padding: 0 30px 20px 0;
+        box-sizing: border-box; 
+        z-index: 2; 
+        max-width: 100%;       
+        overflow: visible;   
+    }
+
+    .vision h2 { 
+        margin: 40px 0 4px 0; 
+        font-size: 20px;
+        line-height: 1.4; 
+        text-align: center; 
+        color: var(--cream); 
+    } 
+
+    .vision-item { 
+        position: relative; 
         width: 100%;
-        margin-top: 10px;
-        padding-bottom: 20px;
+        min-height: 60px; 
+        margin: 0 0 10px; 
+        box-sizing: border-box; 
     }
 
-    .vision h2 {
-        margin: 0 0 15px;
+    .vision-item p { 
+        display: flex; 
+        align-items: center; 
+        width: 100%; 
+        min-height: 60px; 
+        margin: 0; 
+        padding: 20px 40px; 
+        background-color: var(--brown); 
+        font-size: 15px; 
+        line-height: 1.55; 
+        position: relative;
+        box-sizing: border-box;   
+        overflow-wrap: break-word; 
+    } 
+
+    .vision-number { 
+        position: absolute; 
+        z-index: 3; 
+        top: 50%; 
+        left: -17px; 
+        transform: translateY(-50%); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        width: 33px; 
+        height: 33px; 
+        border-radius: 50%;
+        background-color: var(--cream); 
+        color: var(--brown); 
+        font-size: 0.8rem; 
+        line-height: 1; 
+        flex-shrink: 0;          
     }
 
-    .vision-item {
-        width: calc(100% - 5px);
-        min-height: 85px;
-        margin: 20px 0 0 5px;
-    }
-
-    .vision-item p {
-        width: 100%;
-        padding: 18px 15px 18px 30px;
-        font-size: 12px;
-        line-height: 1.7;
-        overflow-wrap: anywhere;
-    }
-
-    .vision-number {
-        left: -15px;
-        width: 32px;
-        height: 32px;
-        font-size: 12px;
-    }
-
-    /* Brat Kid Section */
     .brat-section {
         width: 100%;
-        min-height: auto;
-        padding: 50px 64px 70px;
+        min-height: 300px;
+        padding: 60px 80px;
     }
 
+    /* Brat section */
     .brat-content {
         width: 100%;
         max-width: 100%;
-        margin: 0;
-
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 30px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0;
+        text-align: center;
     }
 
     .brat-info {
-        width: 100%;
-        padding-top: 0;
+        display: contents;
     }
 
     .brat-info h1 {
-        margin: 0 0 5px;
-        padding: 0;
-        font-size: clamp(2rem, 8vw, 2.8rem);
+        order: 1;
+        margin: 0 0 6px 0;
+        padding: 0 24px;
+        font-size: clamp(2rem, 8vw, 3rem);
+        line-height: 1.15;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .brat-info h2 {
-        margin: 0 0 12px;
-        font-size: clamp(19px, 5vw, 24px);
-    }
-
-    .brat-info p {
+        order: 2;
+        margin: 0 0 22px 0;
+        padding: 0 24px;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
         width: 100%;
-        max-width: 100%;
-        margin: 0;
-        font-size: 16px;
-        line-height: 1.7;
+        box-sizing: border-box;
     }
 
-    /* Brat Kid Profile */
     .brat-profile {
+        order: 3;
         width: 100%;
         height: auto;
+        min-width: 0;
         text-align: center;
     }
 
     .profile-photo {
         width: 100%;
-        max-width: 326px;
+        max-width: 220px;
         height: auto;
         aspect-ratio: 1 / 1;
-        margin: 0 auto 15px;
+        margin: 0 auto 30px;
         object-fit: cover;
+        object-position: center;
+        border-radius: 12px;
+        display: block;
     }
 
     .brat-profile h2 {
-        width: 100%;
-        max-width: 326px;
-        margin: 0 auto 20px;
-        font-size: 21px;
+        display: none;
     }
 
-    /* Social Links */
+    .brat-info p {
+        order: 4;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 30px;
+        padding: 0 0;
+        box-sizing: border-box;
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: left;
+    }
+
     .social-links {
+        order: 5;
+        display: flex;
+        align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 40px;
+        margin: 0 0 30px 0;
+        width: 100%;
     }
 
-    .social-icon img {
+    .social-icon {
         width: 30px;
         height: 30px;
     }
+
+    .social-icon img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+    }
 }
+
+@media (max-width: 440px){
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* About Section */
+    .about-section {
+        width: 100%;           
+        min-height: 820px;
+        margin: auto;
+        box-sizing: border-box;
+        padding: 50px 34px 60px;
+        background-color: var(--brown);
+        color: var(--cream);
+        overflow: hidden;   
+    }
+
+    .about-section h1 {
+        margin: 0 0 35px 0;
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 8vw, 3rem);
+        font-weight: 400;
+        color: var(--cream);
+        text-align: center;
+        padding: 0 30px;
+    }
+
+    .about-content { 
+        position: relative; 
+        width: 100%; 
+        max-width: 100%; 
+        margin: 0; 
+        padding: 0; 
+        display: block; 
+        min-height: 300px; 
+    }
+
+    .about-intro {
+        width: 100%;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+
+    .about-intro h2 {
+        margin: 0 0 5px;
+        font-size: 20px;
+        line-height: 1.4;
+        color: var(--cream);
+    }
+
+    .about-intro p {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        font-size: 0.8rem;
+        line-height: 1.55;
+        color: var(--cream);
+        overflow-wrap: break-word;
+    }
+
+    .about-image { 
+        position: absolute;
+        left: -16px; 
+        width: 55%; 
+        height: 150px; 
+        margin: 120px 0 0 -30px;
+        overflow: hidden; 
+        border: 1px solid var(--cream); 
+        border-radius: 0 28px 28px 0;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+
+    .about-image img { 
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        object-position: center; 
+    }
+
+    /* Vision section */
+    .vision { 
+        position: absolute; 
+        top: 190px; 
+        left: 34%; 
+        width: 66%; 
+        margin: 10px 0 80px 0;
+        padding: 0 30px 10px 0;
+        box-sizing: border-box; 
+        z-index: 2; 
+        max-width: 100%;       
+        overflow: visible;   
+    }
+
+    .vision h2 { 
+        margin: 40px 0 4px 0; 
+        font-size: 20px;
+        line-height: 1.4; 
+        text-align: center; 
+        color: var(--cream); 
+    } 
+
+    .vision-item { 
+        position: relative; 
+        width: 120%;
+        min-height: 75px; 
+        margin: 0 0 10px; 
+        box-sizing: border-box; 
+    }
+
+    .vision-item p { 
+        display: flex; 
+        align-items: center; 
+        width: 100%; 
+        min-height: 60px; 
+        margin: 0; 
+        padding: 10px 20px; 
+        background-color: var(--brown); 
+        font-size: 0.8rem; 
+        line-height: 1.55; 
+        position: relative;
+        box-sizing: border-box;   
+        overflow-wrap: break-word; 
+    } 
+
+    .vision-number { 
+        position: absolute; 
+        z-index: 3; 
+        top: 50%; 
+        left: -17px; 
+        transform: translateY(-50%); 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        width: 33px; 
+        height: 33px; 
+        border-radius: 50%;
+        background-color: var(--cream); 
+        color: var(--brown); 
+        font-size: 0.8rem; 
+        line-height: 1; 
+        flex-shrink: 0;          
+    }
+
+    .brat-section {
+        width: 100%;
+        min-height: 300px;
+        padding: 60px 80px;
+    }
+
+    /* Brat section */
+    .brat-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0;
+        text-align: center;
+    }
+
+    .brat-info {
+        display: contents;
+    }
+
+    .brat-info h1 {
+        order: 1;
+        margin: 0 0 6px 0;
+        padding: 0;
+        font-size: clamp(2rem, 8vw, 3rem);
+        line-height: 1.15;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .brat-info h2 {
+        order: 2;
+        margin: 0 0 22px 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .brat-profile {
+        order: 3;
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto 30px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 12px;
+        display: block;
+    }
+
+    .brat-profile h2 {
+        display: none;
+    }
+
+    .brat-info p {
+        order: 4;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 30px;
+        padding: 0 0;
+        box-sizing: border-box;
+        font-size: 0.8rem;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    .social-links {
+        order: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin: 0 0 30px 0;
+        width: 100%;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-icon img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+    }
+}
+
+/* Contact Us */
+/* Tablet */
+@media (min-width: 800px) and (max-width: 1032px) {
+    
+}
+
+/* Mobile */
+@media (max-width: 799px) {
+
+}
+
+/* Extra Small */
+@media (max-width: 440px) {
+   
+}
+
+/*Note:  */
+/* Update Layout for about page tablet and mobile viewport  */
+/* Copy what was on figma */
+/* edit footer */
