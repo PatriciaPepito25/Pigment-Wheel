@@ -1,59 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pigment Wheel</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<!-- <link rel="stylesheet" href="styles.css"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pigment Wheel</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=DM+Serif+Text:ital@0;1&family=Young+Serif&display=swap');</style>
 </head>
-<body>
+<body class="brown-body">
 
     <header class="topbar">
-      <div class="brand-and-logo"><img src="img/logo.png" alt="logo" width="30" height="40">Pigment Wheel</div>
+        <div class="brand-and-logo">
+            <a href="index.html"><img src="img/logo.png" alt="Pigment Wheel logo" width="60" height="70"></a>
+            <span>Pigment Wheel</span>
+        </div>
 
-      <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="timeline.html" class="nav-link">Timeline</a></li>
-          <li><a href="map.html" class="nav-link">Map</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-        </ul>
-      </nav>
+        <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <button id="menu-btn" class="menu-btn"><img src="img/icons/hamburger.svg" alt="Menu"></button>
     </header>
 
-    <section id="about" class="first-section">
-        <h1>ABOUT US</h1>
+<main>
+    <section class="about-section">
+
+       <h1>ABOUT US</h1>
+<div class="about-content">
+    <div class="about-intro">
         <h2>Pigment Wheel</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla lorem sed dui hendrerit commodo. Etiam suscipit diam at nisi finibus, in congue nunc hendrerit.  Curabitur mattis vitae cursus lectus cursus.</p>
+        <p>
+            Pigment Wheel is a creative studio dedicated to exploring the vibrant intersection of color, art, and technology. We believe that color is more than decoration. It is a language that communicates emotion, culture, and identity. Our team combines artistic intuition with technical precision to craft experiences that are both visually striking and deeply meaningful.
+        </p>
+    </div>
 
-        <div class="vission">
-            <h2>Vission</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla lorem sed dui hendrerit commodo. Etiam suscipit diam at nisi finibus, in congue nunc hendrerit.  Curabitur mattis vitae cursus lectus cursus.</p>
-            <p>Quisque fringilla lorem sed dui hendrerit commodo.</p>
-            <p>Etiam suscipit diam at nisi finibus, in congue nunc hendrerit. </p>
+
+    <div class="about-image">
+        <img src="img/pigment.jpg" alt="Colorful pigment flower">
+    </div>
+
+
+    <div class="vision">
+
+        <h2>Vision</h2>
+
+        <div class="vision-item">
+            <span class="vision-number">1</span>
+            <p>
+                To make color design accessible and inspiring for creators of all backgrounds.
+            </p>
         </div>
+
+        <div class="vision-item">
+            <span class="vision-number">2</span>
+            <p>
+                To bridge the gap between traditional art techniques and modern digital tools.
+            </p>
+        </div>
+
+        <div class="vision-item">
+            <span class="vision-number">3</span>
+            <p>
+                To build a global community that celebrates bold, expressive, and joyful visual storytelling.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<section class="brat-section">
+
+    <div class="brat-content">
+        <div class="brat-info">
+
+            <h1>A Brat Kid</h1>
+
+            <h2>Developer and K-pop fan</h2>
+            <p>
+                By day, I write clean, maintainable code and obsess over pixel-perfect layouts. By night, I dive deep into K-pop choreography, fan edits, and comeback countdowns. This blend of logic and fandom shapes everything I create. From playful UI animations to color palettes inspired by album cover art. I believe great software should feel as energetic and personal as the music that keeps me motivated.
+            </p>
+        </div>
+            <div class="brat-profile">
+
+                <img
+                    class="profile-photo"
+                    src="img/anne.jpg"
+                    alt="Profile photo"
+                >
+
+                <h2>Follow me</h2>
+
+                <div class="social-links">
+
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <img src="img/icons/instagram-brown.svg" alt="Instagram">
+                    </a>
+
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <img src="img/icons/facebook-brown.svg" alt="Facebook">
+                    </a>
+
+                    <a href="#" class="social-icon" aria-label="Email">
+                        <img src="img/icons/gmail-brown.svg" alt="Email">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
-    <section class="second-section">
-        <h1>A Brat Kid</h1>
-        <h2>Developer and K-pop fan</h2>
-        <p>Sed suscipit consequat dolor, eget hendrerit nulla faucibus vitae. Praesent dapibus, sem id tristique ornare, nunc felis pulvinar ante, nec pharetra nisl neque egestas tortor. Duis congue ligula gravida nibh posuere consectetur. Suspendisse feugiat ullamcorper arcu sed maximus. Praesent vel mauris et turpis vehicula commodo. In vel neque lobortis, maximus ligula ac, bibendum eros.</p>
-    </section>
+</main>
 
-    <section class="third-section">
-        <p>Follow me</p>
-        <div class="icon"><img src="img/icons/instagram-brown.svg" alt="instagram-icon"></div>
-        <div class="icon"><img src="img/icons/facebook-brown.svg" alt="facebook-icon"></div>  
-        <div class="icon"><img src="img/icons/gmail-brown.svg" alt="gmail-icon"></div> 
-    </section>
+<footer class="no-contact">
 
-    <footer class="no-contact">
-        <p><em>“Built for art historians, chemistry nerds, and everyone in between.”</em></p>
-        <p>©2026 Pigment Wheel. All rights reserved.</p>
-    </footer>
+    <p>
+        <em>“Built for art historians, chemistry nerds, and everyone in between.”</em>
+    </p>
+
+    <p>
+        ©2026 Pigment Wheel. All rights reserved.
+    </p>
+
+</footer>
 </body>
 </html>
