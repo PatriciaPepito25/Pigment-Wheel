@@ -32,6 +32,7 @@ button {
 }
 
 :root {
+    --white: #ffffff;
     --cream: #EEF2C3;
     --footer: linear-gradient(to right, #6b8c8d 0%, #1e2727 87%);
     --brown: #493C33;
@@ -129,8 +130,38 @@ p {
     display: block;
 }
 
-/* Navigation - Mobile/Tablet */
-@media (max-width: 1032px) {
+/* Navigation - Desktop */
+@media (min-width: 1032px) {
+
+    .mobile-nav {
+        position: static;
+        display: block;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        padding: 0;
+        margin: 0 30px 0 0;
+    }
+
+    .nav-link {
+        border-bottom: none;
+        padding: 0;
+    }
+
+    .nav-link:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Navigation - Mobile/Tablet  */
+@media (max-width: 1031px) {
 
     .topbar {
         position: sticky;
@@ -188,36 +219,6 @@ p {
 
     .nav-link:hover {
         background-color: rgba(255, 255, 255, 0.08);
-    }
-}
-
-/* Navigation - Desktop */
-@media (min-width: 1032px) {
-
-    .mobile-nav {
-        position: static;
-        display: block;
-    }
-
-    .menu-btn {
-        display: none;
-    }
-
-    .nav-list {
-        display: flex;
-        align-items: center;
-        gap: 80px;
-        padding: 0;
-        margin: 0 30px 0 0;
-    }
-
-    .nav-link {
-        border-bottom: none;
-        padding: 0;
-    }
-
-    .nav-link:hover {
-        text-decoration: underline;
     }
 }
 
@@ -506,8 +507,7 @@ p {
     margin-left: 50px;
 }
 
-.artists li,
-.works li {
+.artists li, .works li {
     list-style: decimal;
     margin: 20px 0 10px 50px;
 }
@@ -638,6 +638,72 @@ ol {
     background: var(--art);
 }
 
+/* Home Wheel - Desktop */
+@media (min-width: 1032px) {
+
+    .first-section {
+        padding: 70px 60px;
+    }
+
+    .btn-stack {
+        flex-direction: row;
+        max-width: none;
+    }
+
+    .second-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        background: var(--brown);
+        text-align: center;
+        padding: 150px;
+        margin: 0;
+        min-height: 100vh;
+    }
+
+    .wheel-title {
+        color: var(--cream);
+        font-size: clamp(2rem, 8vw, 3.5rem);
+        line-height: 1.15;
+        font-weight: 400;
+        font-family: var(--font-subheading);
+        margin-bottom: 0;
+    }
+}
+
+/* Home Wheel - Tablet */
+@media (min-width: 800px) and (max-width: 1031px) {
+
+    .second-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        background: var(--brown);
+        text-align: center;
+        padding: 10em;
+        margin: 0;
+        min-height: 100vh;
+    }
+
+    .wheel-title {
+        color: var(--cream);
+        font-size: clamp(1rem, 4vw, 2.5rem);
+        line-height: 1.15;
+        font-weight: 400;
+        font-family: var(--font-subheading);
+        margin-bottom: 0;
+    }
+
+    .start-here {
+        font-size: 1rem;
+    }
+
+    .pigment-desc {
+        font-size: 1rem;
+    }
+}
 
 /* Home Wheel - Mobile  */
 @media (max-width: 799px) {
@@ -748,388 +814,6 @@ ol {
         text-align: justify;
     }
 }
-
-/* Home Wheel - Tablet */
-@media (min-width: 800px) and (max-width: 1032px) {
-
-    .second-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        background: var(--brown);
-        text-align: center;
-        padding: 10em;
-        margin: 0;
-        min-height: 100vh;
-    }
-
-    .wheel-title {
-        color: var(--cream);
-        font-size: clamp(1rem, 4vw, 2.5rem);
-        line-height: 1.15;
-        font-weight: 400;
-        font-family: var(--font-subheading);
-        margin-bottom: 0;
-    }
-
-    .start-here {
-        font-size: 1rem;
-    }
-
-    .pigment-desc {
-        font-size: 1rem;
-    }
-}
-
-
-/* Home Wheel - Desktop */
-@media (min-width: 1009px) {
-
-    .first-section {
-        padding: 70px 60px;
-    }
-
-    .btn-stack {
-        flex-direction: row;
-        max-width: none;
-    }
-
-    .second-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        background: var(--brown);
-        text-align: center;
-        padding: 150px;
-        margin: 0;
-        min-height: 100vh;
-    }
-
-    .wheel-title {
-        color: var(--cream);
-        font-size: clamp(2rem, 8vw, 3.5rem);
-        line-height: 1.15;
-        font-weight: 400;
-        font-family: var(--font-subheading);
-        margin-bottom: 0;
-    }
-}
-
-/* About - Tablet */
-@media (max-width: 1032px) {
-
-    /*HOME PAGE*/
-    .site-footer {
-        min-height: 200px;
-        padding: 25px 6%;
-        column-gap: 30px;
-    }
-
-    .author {
-        grid-template-columns: 120px 1fr;
-        column-gap: 25px;
-    }
-
-    .author::before {
-        width: 95px;
-        height: 95px;
-    }
-
-    .footer-heading {
-        font-size: 16px;
-        text-align: right;
-        margin-left: 150px; 
-    }
-
-    .footer-author {
-        font-size: 11px;
-    }
-    .footer-bio {
-        font-size: 9px;
-    }
-
-    .footer-quote,
-    .social-row,
-    .footer-copy {
-        font-size: 9px;
-    }
-}
-
-.about-section {
-    padding-left: 7%;
-    padding-right: 7%;
-}
-
-.about-content {
-    max-width: 540px;
-    grid-template-columns: 130px 130px 220px;
-    column-gap: 12px;
-}
-
-.about-intro p {
-    width: 125px;
-}
-
-.about-image {
-    width: 135px;
-    height: 138px;
-}
-
-.vision-item {
-    width: 220px;
-}
-
-.brat-section {
-    padding-left: 7%;
-    padding-right: 7%;
-}
-
-.brat-content {
-    max-width: 540px;
-    grid-template-columns:
-        1fr
-        175px;
-
-    column-gap: 30px;
-}
-
-.brat-info p {
-    width: 270px;
-}
-
-.brat-profile {
-    width: 175px;
-}
-
-.profile-photo {
-    width: 175px;
-    height: 170px;
-}
-
-/* About - Mobile */
-@media (max-width: 799px) {
-
-    /* home Page */
-    .site-footer {
-        min-height: auto;
-        padding: 30px 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .author {
-        width: 100%;
-        max-width: 330px;
-        display: grid;
-        grid-template-columns: 100px 1fr;
-        grid-template-rows: auto auto auto;
-        column-gap: 20px;
-        text-align: left;
-    }
-    .footer-heading {
-        grid-column: 1 / -1;
-        margin: 0 0 20px;
-        text-align: center;
-        font-size: 16px;
-    }
-    .author::before {
-        width: 90px;
-        height: 90px; 
-        margin: 0 auto;
-    }
-
-    .footer-author {
-        font-size: 10px;
-    }
-
-    .footer-bio {
-        max-width: 200px;
-        font-size: 8px;
-        line-height: 1.5;
-    }
-
-    .footer-quote {
-        width: 100%;
-        max-width: 320px;
-        margin: 25px auto 10px;
-        font-size: 9px;
-        text-align: center;
-    }
-
-    .social-row {
-        margin: 5px auto 8px;
-        justify-content: center;
-        font-size: 9px;
-    }
-
-    .social-row::before {
-        font-size: 9px;
-    }
-
-    .icon {
-        width: 17px;
-        height: 17px;
-    }
-    .footer-copy {
-        margin: 2px auto 0;
-        font-size: 8px;
-        text-align: center;
-    }
-
-    .about-section {
-        min-height: auto;
-        padding: 38px 25px 50px;
-    }
-
-    .about-section > h1 {
-        margin-bottom: 25px;
-        font-size: 25px;
-    }
-
-    .about-content {
-        max-width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        row-gap: 22px;
-        justify-items: center;
-    }
-
-    .about-image {
-        order: 1;
-        width: 145px;
-        height: 140px;
-        margin: 0 auto;
-    }
-
-    .about-intro {
-        order: 2;
-        width: 100%;
-        padding: 0;
-        text-align: left;
-    }
-
-    .about-intro h2 {
-        font-size: 16px;
-    }
-
-    .about-intro p {
-        width: 100%;
-        max-width: 310px;
-        font-size: 11px;
-    }
-
-    .vision {
-        order: 3;
-        width: 100%;
-        margin-top: 5px;
-    }
-
-    .vision > h2 {
-        margin: 0 0 12px;
-        font-size: 16px;
-    }
-
-    .vision-item {
-        width: calc(100% - 5px);
-        min-height: 65px;
-        margin-bottom: 12px;
-    }
-
-    .vision-item p {
-        padding: 14px 15px 14px 30px;
-        font-size: 8px;
-        line-height: 1.6;
-    }
-
-    .vision-number {
-        left: -16px;
-        width: 32px;
-        height: 32px;
-        font-size: 10px;
-    }
-
-    /* Brat kid section */
-    .brat-section {
-        min-height: auto;
-        padding: 55px 25px 60px;
-    }
-
-    .brat-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 35px;
-        max-width: 100%;
-    }
-
-    .brat-info {
-        width: 100%;
-        text-align: left;
-    }
-
-    .brat-info h1 {
-        font-size: 24px;
-    }
-
-    .brat-info h2 {
-        font-size: 15px;
-    }
-
-    .brat-info p {
-        width: 100%;
-        max-width: 330px;
-        font-size: 10px;
-        line-height: 1.55;
-    }
-
-    .brat-profile {
-        width: 145px;
-        margin: 0 auto;
-    }
-
-    .profile-photo {
-        width: 145px;
-        height: 145px;
-        margin-bottom: 7px;
-    }
-
-    .brat-profile h2 {
-        font-size: 15px;
-    }
-
-    .social-links {
-        gap: 13px;
-    }
-
-    .social-icon {
-        width: 28px;
-        height: 28px;
-    }
-
-    .social-icon img {
-        width: 24px;
-        height: 24px;
-    }
-
-    /* About footer */
-    .no-contact {
-        min-height: 70px;
-
-        padding: 15px 10px;
-    }
-
-    .no-contact p:first-child {
-        font-size: 10px;
-    }
-
-    .no-contact p:last-child {
-        font-size: 10px;
-    }
-}
-
 
 /* II. Pigment Profile */
 .screen-active {
@@ -1596,7 +1280,7 @@ hr {
         margin: 10px 0 0;
         padding: 0 3px;
         max-width: 100%;
-        min-width: 0;
+        min-width: 0;   
         font-family: var(--font-body);
         font-size: clamp(0.7rem, 2.8vw, 0.85rem);
         line-height: 1.4;
@@ -1827,7 +1511,6 @@ hr {
 }
 
 /* Vision Section */
-
 .vision {
     width: 100%;
     min-width: 0;
@@ -2424,7 +2107,7 @@ hr {
     }
 }
 
-@media (max-width: 440px){
+@media (max-width: 380px){
     html, body {
         margin: 0;
         padding: 0;
@@ -2674,23 +2357,354 @@ hr {
     }
 }
 
-/* Contact Us */
-/* Tablet */
-@media (min-width: 800px) and (max-width: 1032px) {
-    
+/* Contact Us - Desktop */
+/* ==========================================================
+   Contact page - Get In Touch
+   Shared look (all viewports). Keep this ABOVE the media queries.  
+   Colors are defined on .contact, so nothing outside it is touched.
+   ========================================================== */
+body:has(.contact) {
+    min-height: 100vh;
+    min-height: 100dvh;      /* accounts for mobile browser bars */
+    display: flex;
+    flex-direction: column;
 }
 
-/* Mobile */
+.contact {
+    flex: 1 0 auto;          /* grows to fill the leftover height */
+    --gt-split: 69%;         /* where the cream turns to slate, set per breakpoint below */
+    height: auto;
+    --gt-line: rgba(74, 59, 50, 0.35);
+    grid-column: 1 / -1;
+    background: linear-gradient(to bottom, var(--cream) 0, var(--cream) var(--gt-split), var(--art) var(--gt-split), var(--art) 100%);
+}
+
+.contact-section {
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: var(--art);
+    border: 1px solid var(--gt-line);
+    border-radius: 15px;
+}
+
+.cta h2 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--brown);
+}
+
+.cta p {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--brown);
+}
+
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* Name and Email side by side */
+}
+
+/* Subject, Message and the button span both columns */
+.contact .field:nth-child(n+3),
+.contact .submit-row {
+    grid-column: 1 / -1;
+}
+
+.contact .field input,
+.contact .field select,
+.contact .field textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 14px;
+    border: 1px solid var(--gt-line);
+    border-radius: 6px;
+    background: var(--cream);
+    font-family: var(--font-body);
+    color: var(--brown);
+}
+
+.contact .field input::placeholder,
+.contact .field textarea::placeholder {
+    color: var(--brown);
+    opacity: 0.85;
+}
+
+/* Subject dropdown with a light chevron on the right */
+.contact .field select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='10' viewBox='0 0 16 10'><path d='M1 1l7 7 7-7' fill='none' stroke='%23a9ab8a' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    cursor: pointer;
+}
+
+.contact .field textarea {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    resize: vertical;
+}
+
+.contact .field input:focus-visible,
+.contact .field select:focus-visible,
+.contact .field textarea:focus-visible,
+.contact .submit-row button:focus-visible {
+    outline: 3px solid var(--brown);
+    outline-offset: 2px;
+}
+
+.contact .submit-row {
+    display: flex;
+}
+
+.contact .submit-row button {
+    padding: 0 32px;
+    border: none;
+    border-radius: 999px;
+    background: var(--brown);
+    color: var(--cream);
+    font-family: var(--font-heading);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.contact .submit-row button:hover {
+    background: var(--science);
+    border: 1px solid var(--cream);
+}
+
+.contact .submit-row button:active {
+    transform: translateY(1px);
+}
+
+
+/* ==========================================================
+   Contact - Desktop (image 1)
+   Card with the title + text on the left, the form on the right.
+   ========================================================== */
+@media (min-width: 1033px) {
+
+    .contact {
+        padding: 70px 0 100px; --gt-split: 459px; 
+    }
+
+    .contact-section {
+        display: grid;
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+        align-items: center;
+        column-gap: 5vw;
+        width: 90%;
+        max-width: 1240px;
+        padding: 56px 44px 36px 72px;
+    }
+
+    .cta h2 {
+        margin-bottom: 18px;
+        font-size: clamp(2.8rem, 4.4vw, 3.6rem);
+    }
+
+    .cta p {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        max-width: 22em;
+    }
+
+    .contact form {
+        gap: 16px;
+    }
+
+    .contact .field input,
+    .contact .field select {
+        height: 52px;
+        font-size: 16px;
+    }
+
+    .contact .field textarea {
+        min-height: 200px;
+        font-size: 16px;
+    }
+
+    .contact .submit-row {
+        justify-content: flex-end;
+    }
+
+    .contact .submit-row button {
+        min-width: 150px;
+        height: 52px;
+        font-size: 16px;
+    }
+}
+
+
+/* ==========================================================
+   Contact - Tablet (image 1, scaled down)
+   ========================================================== */
+@media (min-width: 800px) and (max-width: 1032px) {
+
+    .contact {
+        padding: 70px 0 160px;
+        --gt-split: 446px;
+    }
+
+    .contact-section {
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        align-items: center;
+        column-gap: 4vw;
+        width: 92%;
+        padding: 44px 32px 32px 44px;
+    }
+
+    .cta h2 {
+        margin-bottom: 14px;
+        font-size: clamp(2rem, 4.8vw, 2.8rem);
+    }
+
+    .cta p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .contact form {
+        gap: 14px;
+    }
+
+    .contact .field input,
+    .contact .field select {
+        height: 46px;
+        font-size: 15px;
+    }
+
+    .contact .field textarea {
+        min-height: 160px;
+        font-size: 15px;
+    }
+
+    .contact .submit-row {
+        justify-content: flex-end;
+    }
+
+    .contact .submit-row button {
+        min-width: 130px;
+        height: 46px;
+        font-size: 15px;
+    }
+}
+
+
+/* ==========================================================
+   Contact - Mobile (image 2)
+   One column: title, text, then the form; button centered.
+   ========================================================== */
 @media (max-width: 799px) {
 
+    .contact {
+        padding: 70px 0 120px;
+        --gt-split: 454px; 
+    }
+
+    .contact-section {
+        display: block;
+        width: 86%;
+        padding: 26px 20px 28px;
+    }
+
+    .cta h2 {
+        margin-bottom: 12px;
+        font-size: clamp(1.7rem, 7.5vw, 2.2rem);
+    }
+
+    .cta p {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    .contact form {
+        gap: 10px;
+    }
+
+    .contact .field input,
+    .contact .field select {
+        height: 42px;
+        padding-left: 12px;
+        font-size: 14px;
+    }
+
+    .contact .field textarea {
+        min-height: 110px;
+        font-size: 14px;
+    }
+
+    .contact .submit-row {
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    .contact .submit-row button {
+        min-width: 120px;
+        height: 44px;
+        font-size: 14px;
+    }
 }
 
-/* Extra Small */
-@media (max-width: 440px) {
-   
-}
 
+/* ==========================================================
+   Contact - Extra small (same as mobile, tighter)
+   ========================================================== */
+@media (max-width: 380px) {
+
+    .contact {
+        padding: 70px 0 130px;
+        --gt-split: 461px; 
+    }
+
+    .contact-section {
+        width: 90%;
+        padding: 20px 16px 24px;
+    }
+
+    .cta h2 {
+        font-size: 1.6rem;
+    }
+
+    .cta p {
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+    }
+
+    .contact form {
+        gap: 8px;
+    }
+
+    .contact .field input,
+    .contact .field select {
+        height: 40px;
+        padding-left: 10px;
+        font-size: 13px;
+    }
+
+    .contact .field select {
+        padding-right: 32px;
+        background-position: right 10px center;
+    }
+
+    .contact .field textarea {
+        min-height: 96px;
+        font-size: 13px;
+    }
+
+    .contact .submit-row button {
+        min-width: 110px;
+        font-size: 13px;
+    }
+}
 /*Note:  */
-/* Update Layout for about page tablet and mobile viewport  */
-/* Copy what was on figma */
+/* create css for contact page */
+/* print query */
+/* link socials */
 /* edit footer */
