@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigment Wheel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=DM+Serif+Text:ital@0;1&family=Young+Serif&display=swap');</style>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand-and-logo">
+            <a href="index.html"><img src="img/logo.png" alt="Pigment Wheel logo" width="60" height="70"></a>
+            <span>Pigment Wheel</span>
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact_us.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <button id="menu-btn" class="menu-btn"><img src="img/icons/hamburger.svg" alt="Menu"></button>
+    </header>
+
+    <div class="contact">
+        <section id="contact" class="contact-first-section">
+            <h1>CONTACT US</h1>
+            <div>
+                <h2>FAQ: </h2>
+                <ul>
+                    <li>Where can I learn about a specific pigment?</li>
+                    <li>How can I suggest a pigment to add?</li>
+                    <li>How can I report incorrect information?</li>
+                    <li>Can I contribute to the encyclopedia?
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>STILL HAVE QUESTIONS ABOUT A COLOR?</h2>
+                <p>Whether you have a question, suggestion, correction, or simply want to share your thoughts about Pigment Wheel, we'd love to hear from you.</p>
+            </div>
+        </section>
+
+        <section class="contact-second-section">
+            <h1>Get in Touch</h1>
+    
+            <form action="#" method="post">
+                <div class="field">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    </div>
+                
+                    <div class="field">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            
+                <div class="field">
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject" required>
+                        <option class="select" value="" selected disabled>Select</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Report an Error</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            
+                <div class="field">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+            
+                <div class="submit-row">
+                    <button type="submit">SUBMIT</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <footer class="no-contact">
+        <p><em>“Built for art historians, chemistry nerds, and everyone in between.”</em></p>
+        <p>©2026 Pigment Wheel. All rights reserved.</p>
+    </footer>
+</body>
+</html>
