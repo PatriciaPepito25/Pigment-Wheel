@@ -1,92 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pigment Wheel</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=DM+Serif+Text:ital@0;1&family=Young+Serif&display=swap');</style>
-    <link rel="icon" href="img/favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pigment Wheel</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=DM+Serif+Text:ital@0;1&family=Young+Serif&display=swap');</style>
+  <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 <body>
-    <header class="topbar">
-        <div class="brand-and-logo">
-            <a href="index.html"><img src="img/logo.png" alt="Pigment Wheel logo" width="60" height="70"></a>
-            <span>Pigment Wheel</span>
-        </div>
 
-        <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
-            <ul class="nav-list">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact_us.html" class="nav-link">Contact Us</a></li>
-            </ul>
-        </nav>
+<div class="page">
+  <header class="topbar">
+    <div class="brand-and-logo">
+      <a href="index.html"><img src="img/logo.png" alt="Pigment Wheel logo" width="60" height="70"></a>
+      <span>Pigment Wheel</span>
+    </div>
+  </header>
 
-        <button id="menu-btn" class="menu-btn"><img src="img/icons/hamburger.svg" alt="Menu"></button>
-    </header>
+  <section id="home" class="screen-active">
+    <img src="img/green.jpg" alt="green-pigment" width="100%" height="200">
 
-    <div class="contact">
-        <section class="contact-section">
-            <div class="cta">
-                <h2>Get In Touch</h2>
-                <p>Have a question, a correction, or a pigment you'd like to see added? Send us a message and we'll get back to you.</p>
-            </div>
-    
-            <form action="https://formspree.io/f/xyeknnva" method="POST">
-                <div class="field">
-                    <input placeholder="Name" type="text" id="name" name="name" required>
-                    </div>
-                
-                    <div class="field">
-                    <input placeholder="Email" type="email" id="email" name="email" required>
-                </div>
-            
-                <div class="field">
-                    <select placeholder="Subject" id="subject" name="subject" required>
-                        <option value="" selected disabled>Select</option>
-                        <option value="general">General Question</option>
-                        <option value="suggest">Suggest a Pigment</option>
-                        <option value="correction">Report Incorrect Information</option>
-                        <option value="contribute">Contribute to the Encyclopedia</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-            
-                <div class="field">
-                    <textarea placeholder="Message" id="message" name="message" rows="4" required></textarea>
-                </div>
-            
-                <div class="submit-row">
-                    <button type="submit" id="#">SUBMIT</button>
-                    <div id="#"></div>
-                </div>
-            </form>
-        </section>
+    <hr>
+    <div class="title">
+      <h1>Malachite</h1>
+      <h2><em>The Mountain's Green Heart</em></h2>
+    </div>
+    <hr>
+
+    <div>
+      <h2>Origin</h2>
+      <p>Malachite is a basic copper carbonate mineral [CuCO₃·Cu(OH)₂] found in copper deposits worldwide. Major historical sources included:</p>
+      <ol>
+        <li>Russia (Ural Mountains) — particularly the Nizhne-Tagilsk deposit</li>
+        <li>Cyprus — a major source in antiquity</li>
+        <li>Spain and Macedonia — noted by Pliny</li>
+        <li>Armenia — producing "armenium," considered the most precious variety</li>
+        <li>France (Chessy) — a notable European deposit</li>
+        <li>China (Hubei Province) — significant for Chinese painting</li>
+        <li>United States (Bisbee, Arizona) — later mining</li>
+      </ol>
     </div>
 
-    <footer class="site-footer"> 
+    <div>
+      <h2>Why These Regions?</h2>
+      <p>Malachite forms as a secondary mineral when copper ores weather and react with carbonated water. It's found in the oxidation zones of copper deposits, often alongside azurite (blue copper carbonate). The two minerals are "connatural counterparts"—where copper weathers, both can appear.</p>
+    </div>
 
-        <div class="author">
-        <p class="footer-author">Patricia Margaret D. Pepito</p>
-        <p class="footer-bio">
-            A college student, currently taking BSIT Web Development, who is passionate in
-            creating stuffs and turning ideas into tangible design and UI elements.
-        </p>
-        </div>
+    <div>
+        <h2>History</h2>
+        <p>Malachite has been used as a pigment and gemstone since before 3000 BCE. In ancient Egypt, it was one of the earliest green pigments, used in tomb paintings and cosmetics (Hurtaud, 2018). Pliny the Elder called it “chrysocolla” and listed it among the "florid" pigments—rare and expensive materials. Roman artists used malachite in wall paintings, and it has been identified in pigment pots from Pompeii.</p>
+        <p>In medieval Europe, malachite was used sparingly in tempera paintings before the 16th century. Its coarser particles created a different texture than other greens, and it was sensitive to acids and sulfur fumes—limitations that restricted its use. In China, malachite was a staple of traditional painting, particularly for landscape elements. The 16th-century painter Qiu Ying used it alongside azurite to create depth and communicate meaning—the high cost of these minerals made their placement in a composition a deliberate artistic choice.</p>
+    <div>
 
-        <p class="footer-quote"><em>&ldquo;Built for art historians, chemistry nerds, and everyone in between.&rdquo;</em>
-        </p>
+    <div>
+      <h2>How Was It Made?</h2>
+      <p>Malachite pigment production was straightforward but required care:</p>
+      <ol class="production">
+        <li>Careful selection of pure mineral specimens.</li>
+        <li>Grinding — coarsely ground malachite gives a dark green; finely ground particles give a lighter, more transparent tone.</li>
+        <li>Washing and levigation — separating particles by size in water.</li>
+      </ol>
+      <p>The pigment is lightfast but decomposes in acids with carbon dioxide bubbles, and turns black with warm alkalis or sulfur fumes. A synthetic version, green verditer, was made by coloring chalk with copper sulfate. It produced a paler color with regularly sized, rounded particles—distinguishable from natural malachite under magnification.</p>
+    </div>
+    
+    <div>
+      <h2>What Makes It Dangerous?</h2>
+      <p>Malachite is moderately toxic. The copper content is the primary concern. Copper compounds can cause:</p>
+      <ul class="lab">
+          <li>Skin irritation and allergic reactions</li>
+          <li>Respiratory irritation from inhalation</li>
+          <li>Chronic exposure may cause anemia</li>
+      </ul>
+      <p>The pigment is insoluble in water and ethanol, which limits absorption through the skin. The main risk is inhalation of dust during grinding. Historical pigment makers likely suffered respiratory issues from prolonged exposure.</p>
+    </div>
 
-        <p class="footer-copy">&copy; 2026 Pigment Wheel. All rights reserved.</p>
+    <div>
+      <h2>Artists Who Used Malachite</h2>
+      <ul class="artists">
+        <li>
+          <dt>Fra Filippo Lippi and Sandro Botticelli</dt>
+          <dd>They used malachite in their Adoration paintings of the 1450s–1470s. These Florentine artists shifted backgrounds from glittering gold to vivid green—malachite was among the pigments that made this possible. Lippi's mystical green forests for the Medici family and Botticelli's verdant meadows marked the beginning of naturalism in Florentine painting.</dd>
+        </li>
 
-        <div class="social-row">
-            <a href="https://www.instagram.com/patmrd.p/" class="icon" aria-label="Instagram"><img src="img/icons/instagram.svg" alt="Instagram icon" ></a>
-            <a href="https://www.facebook.com/patricia.pepito.79" class="icon" aria-label="Facebook"><img src="img/icons/facebook.svg" alt="Facebook icon"></a>
-            <a href="mailto:pepitopatriciamargaretdizon@gmail.com" class="icon" aria-label="Email"><img src="img/icons/gmail.svg" alt="Email icon"></a>
-        </div>
+        <li>
+          <dt>Qiu Ying (ca. 1498–1552)</dt>
+          <dd>A Chinese colorist, used malachite in landscape and figure paintings. A dissertation on his work argues that he used color as a communicative tool, reserving prized pigments like malachite for motifs important to his patrons.</dd>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Famous Works Featuring Malachite</h2>
+      <ul class="works">
+        <li>
+          <dt>Adoration of the Child — Fra Filippo Lippi (1450s–1460s)</dt>
+        </li>
+        <li>
+          <dt>Piacenza Tondo — Sandro Botticelli</dt>
+        </li>
+        <li>
+          <dt>Landscape paintings — Qiu Ying (16th century)</dt>
+        </li>
+        <li>
+          <dt>Pompeian wall paintings — Roman artists (before 79 CE)</dt>
+        </li>
+      </ul>
+    </div>
+
+    <h2>Want to Explore More Pigments?</h2>
+    <a href="index.html" class="back-button">Pigment Wheel</a>
+  </section>
+
+  <footer class="site-footer"> 
+
+    <div class="author">
+      <p class="footer-author">Patricia Margaret D. Pepito</p>
+      <p class="footer-bio">
+        A college student, currently taking BSIT Web Development, who is passionate in
+        creating stuffs and turning ideas into tangible design and UI elements.
+      </p>
+    </div>
+
+    <p class="footer-quote"><em>&ldquo;Built for art historians, chemistry nerds, and everyone in between.&rdquo;</em>
+    </p>
+
+    <p class="footer-copy">&copy; 2026 Pigment Wheel. All rights reserved.</p>
+
+    <div class="social-row">
+      <a href="https://www.instagram.com/patmrd.p/" class="icon" aria-label="Instagram"><img src="img/icons/instagram.svg" alt="Instagram icon" ></a>
+      <a href="https://www.facebook.com/patricia.pepito.79" class="icon" aria-label="Facebook"><img src="img/icons/facebook.svg" alt="Facebook icon"></a>
+      <a href="mailto:pepitopatriciamargaretdizon@gmail.com" class="icon" aria-label="Email"><img src="img/icons/gmail.svg" alt="Email icon"></a>
+    </div>
   </footer>
+</div>
 </body>
 </html>
