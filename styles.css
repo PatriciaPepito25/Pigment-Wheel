@@ -114,7 +114,7 @@ p {
 .mobile-nav.active {
     display: block;
 }
-
+    
 .nav-list {
     display: none;
 }
@@ -1837,6 +1837,7 @@ body:has(.contact) {
     .mobile-nav.active {
         display: block;
         height: 290px;
+        border: 2px solid var(--cream);
     }
 
     .nav-list {
@@ -2513,6 +2514,7 @@ body:has(.contact) {
 
     .mobile-nav.active {
         display: block;
+        border: 2px solid var(--cream);
     }
 
     .nav-list {
@@ -2585,6 +2587,7 @@ body:has(.contact) {
 
     .mobile-nav.active{
         height: 11rem;
+        border: 2px solid var(--cream);
     }
 
     .nav-list{
