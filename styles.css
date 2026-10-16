@@ -1838,7 +1838,7 @@ body:has(.contact) {
         display: block;
         height: 290px;
         border: 2px solid var(--cream);
-        background: rgba(73, 60, 51, 0.91);;
+        background: #493c33e8;
     }
 
     .nav-list {
@@ -2516,7 +2516,7 @@ body:has(.contact) {
     .mobile-nav.active {
         display: block;
         border: 2px solid var(--cream);
-        background: rgba(73, 60, 51, 0.91);
+        background: #493c33e8;
     }
 
     .nav-list {
@@ -2590,7 +2590,7 @@ body:has(.contact) {
     .mobile-nav.active{
         height: 11rem;
         border: 2px solid var(--cream);
-        background: rgba(73, 60, 51, 0.91);
+        background: #493c33e8;
     }
 
     .nav-list{
