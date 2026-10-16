@@ -2575,12 +2575,20 @@ body:has(.contact) {
     .nav-link {
         display: block;
         width: 100%;
-        padding: 9px;
+        padding: 0 0 10px;
         color: var(--cream);
         text-align: center;
         font-family: var(--font-subheading);
         font-size: 1rem;
         text-transform: uppercase;
+    }
+
+    .mobile-nav.active{
+        height: 11rem;
+    }
+
+    .nav-list{
+        padding: 20px 0 0 0;
     }
 
     .nav-list li {
@@ -2601,6 +2609,12 @@ body:has(.contact) {
 
     ul {
         font-size: 1rem;
+    }
+
+    .screen-active img {
+        height: clamp(80px, 8vw, 100px);
+        width: auto;
+        object-fit: contain;
     }
 
     .artists li, .works li {
