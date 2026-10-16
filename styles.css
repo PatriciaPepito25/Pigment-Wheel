@@ -2612,9 +2612,9 @@ body:has(.contact) {
     }
 
     .screen-active img {
-        height: clamp(80px, 8vw, 100px);
-        width: auto;
-        object-fit: contain;
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     .artists li, .works li {
