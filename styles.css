@@ -2563,6 +2563,43 @@ body:has(.contact) {
     Applied after the general mobile styles. */
 @media (max-width: 584px) and (min-width: 360px){
     
+    .nav-link {
+        display: block;
+        width: 100%;
+        padding: 9px;
+        color: var(--cream);
+        text-align: center;
+        font-family: var(--font-subheading);
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    .nav-list li {
+        width: 100%;
+        height: 2em;
+        border-bottom: 1px solid var(--cream);
+    }
+
+    h2 {
+        font-family: var(--font-subheading);
+        font-size: clamp(1rem, 8vw, 2rem);
+    }
+
+    p {
+        font-family: var(--font-body);
+        font-size: 1rem;
+    }
+
+    ul {
+        font-size: 1rem;
+    }
+
+    .artists li, .works li {
+        list-style: decimal;
+        margin: 20px 0 10px 10px;
+        font-size: 1rem;
+    }
+
     .first-section, .second-section{
         min-height: 100vh;
         margin: 30x 20px;
@@ -2595,6 +2632,7 @@ body:has(.contact) {
 
     .btn-outline{
         width: 90%;
+        padding: 5px;
     }
 
     #wheelSvg {
