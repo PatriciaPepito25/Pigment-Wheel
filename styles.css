@@ -16,6 +16,7 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    font-size: 1.5rem;
 }
 
 a {
@@ -58,16 +59,17 @@ body {
 
 h1 {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 8vw, 3.5rem);
+    font-size: clamp(2rem, 8vw, 3rem);
 }
 
 h2 {
     font-family: var(--font-subheading);
-    font-size: clamp(1rem, 8vw, 1.5rem);
+    font-size: clamp(1.9rem, 8vw, 2.2rem);
 }
 
 p {
     font-family: var(--font-body);
+    font-size: 1.5rem;
 }
 
 /* Header */
@@ -544,16 +546,18 @@ p {
 .artists li, .works li {
     list-style: decimal;
     margin: 20px 0 10px 50px;
+    font-size: 1.5rem;
 }
 
-ol {
+/* ol {
     display: block;
     list-style-type: decimal;
     margin-block-start: 1em;
     margin-block-end: 1em;
     padding-inline-start: 40px;
     unicode-bidi: isolate;
-}
+    font-size: 1.5rem;
+} */
 
 .back-button {
     display: inline-block;
