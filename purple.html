@@ -9,14 +9,25 @@
     <style>@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=DM+Serif+Text:ital@0;1&family=Young+Serif&display=swap');</style>
     <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
+    <header class="topbar">
+        <div class="brand-and-logo">
+            <a href="index.html"><img src="img/logo.png" alt="Pigment Wheel logo" width="60" height="70"></a>
+            <span>Pigment Wheel</span>
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact_us.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <button id="menu-btn" class="menu-btn"><img src="img/icons/hamburger.svg" alt="Menu"></button>
+    </header>
     <body>
         <div class="page">
-            <header class="topbar">
-                <div class="brand-and-logo">
-                    <a href="index.html"><img src="img/logo.png" alt="Pigment Wheel logo" width="60" height="70"></a>
-                    <span>Pigment Wheel</span>
-                </div>
-            </header>
 
             <section id="home" class="screen-active">
                 <img src="img/purple.jpg" alt="purple-pigment" width="100%" height="200">
