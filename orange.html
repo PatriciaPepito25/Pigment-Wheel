@@ -10,13 +10,24 @@
   <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 <body>
-    <div class="page">
-        <header class="topbar">
+    <header class="topbar">
         <div class="brand-and-logo">
             <a href="index.html"><img src="img/logo.png" alt="Pigment Wheel logo" width="60" height="70"></a>
             <span>Pigment Wheel</span>
-            </div>
-        </header>
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact_us.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <button id="menu-btn" class="menu-btn"><img src="img/icons/hamburger.svg" alt="Menu"></button>
+  </header>
+    <div class="page">
 
         <section id="home" class="screen-active">
             <img src="img/orange.jpg" alt="orange-pigment" width="100%" height="200">
@@ -102,25 +113,26 @@
         </section>
         
         <footer class="site-footer"> 
-            <div class="author">
-            <p class="footer-author">Patricia Margaret D. Pepito</p>
-            <p class="footer-bio">
-                A college student, currently taking BSIT Web Development, who is passionate in
-                creating stuffs and turning ideas into tangible design and UI elements.
-            </p>
-            </div>
 
-            <p class="footer-quote"><em>&ldquo;Built for art historians, chemistry enthusiasts, and everyone in between.&rdquo;</em>
-            </p>
+    <div class="author">
+      <p class="footer-author">Patricia Margaret D. Pepito</p>
+      <p class="footer-bio">
+        A college student, currently taking BSIT Web Development, who is passionate in
+        creating stuffs and turning ideas into tangible design and UI elements.
+      </p>
+    </div>
 
-            <p class="footer-copy">&copy; 2026 Pigment Wheel. All rights reserved.</p>
+    <p class="footer-quote"><em>&ldquo;Built for art historians, chemistry enthusiasts, and everyone in between.&rdquo;</em>
+    </p>
 
-            <div class="social-row">
-            <a href="https://www.instagram.com/patmrd.p/" class="icon" aria-label="Instagram"><img src="img/icons/instagram.svg" alt="Instagram icon" ></a>
-            <a href="https://www.facebook.com/patricia.pepito.79" class="icon" aria-label="Facebook"><img src="img/icons/facebook.svg" alt="Facebook icon"></a>
-            <a href="mailto:pepitopatriciamargaretdizon@gmail.com" class="icon" aria-label="Email"><img src="img/icons/gmail.svg" alt="Email icon"></a>
-            </div>
-        </footer>
+    <p class="footer-copy">&copy; 2026 Pigment Wheel. All rights reserved.</p>
+
+    <div class="social-row">
+      <a href="https://www.instagram.com/patmrd.p/" class="icon" aria-label="Instagram"><img src="img/icons/instagram.svg" alt="Instagram icon" ></a>
+      <a href="https://www.facebook.com/patricia.pepito.79" class="icon" aria-label="Facebook"><img src="img/icons/facebook.svg" alt="Facebook icon"></a>
+      <a href="mailto:pepitopatriciamargaretdizon@gmail.com" class="icon" aria-label="Email"><img src="img/icons/gmail.svg" alt="Email icon"></a>
+    </div>
+  </footer>
         </div>
     </body>
 </html>
