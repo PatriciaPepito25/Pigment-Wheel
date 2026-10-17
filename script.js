@@ -35,6 +35,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const svg = document.getElementById("wheelSvg");
   if (!svg) return; 
 
+  // Slowly rotate the entire pigment wheel
+  svg.animate(
+      [
+        { transform: "rotate(0deg)" },
+        { transform: "rotate(360deg)" }
+      ],
+      {
+        duration: 11100,
+        iterations: Infinity,
+        easing: "linear"
+      }
+  );
+
   const n = WEDGES.length;
   const anglePer = (2 * Math.PI) / n;
   const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
@@ -81,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-    // Build wedges
+// Build wedges
   WEDGES.forEach((w, i) => {
     const startAngle = -Math.PI / 2 + i * anglePer; // start at top, go clockwise
     const endAngle = startAngle + anglePer;
@@ -136,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setLabel(WEDGES[i].label);
       activeLabel = WEDGES[i].label;
       i = (i + 1) % wedgeEls.length;
-    }, 1400);
+    }, 2500);
     svg.addEventListener("click", () => clearInterval(interval), { once: true });
   }
   autoDemo();
