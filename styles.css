@@ -594,7 +594,7 @@ p {
 .tagline {
     margin: 20px 0;
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 8vw, 6rem);
+    font-size: clamp(2rem, 8vw, 5rem);
     line-height: 1.15;
     font-weight: 400;
     color: var(--brown);
