@@ -43,9 +43,9 @@ button {
     --cream: #EEF2C3;
     --footer: #3a1a03; 
     --brown: #493C33;
-    --art: #A0BEBF;
+    --art: #87aaac;
     --history: #d15c1d;
-    --science: #F2A62D;
+    --science: #e49618;
     --font-heading: "Young Serif", serif;
     --font-subheading: "DM Serif Text", serif;
     --font-body: "Segoe UI", Arial, sans-serif;
@@ -339,7 +339,7 @@ p {
     grid-row: 1;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     margin-top: 120px;
     }
 
@@ -352,8 +352,8 @@ p {
     }
 
     .icon {
-    width: 18px;
-    height: 18px;
+    width: 24x;
+    height: 24px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -471,7 +471,7 @@ p {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 5px;
+        gap: 16px;
         margin: 0;
         min-width: 0;
     }
@@ -487,8 +487,8 @@ p {
 
     /* Social Icons */
     .icon {
-        width: 18px;
-        height: 18px;
+        width: 24px;
+        height: 24px;
         flex-shrink: 0;
         display: inline-flex;
         align-items: center;
